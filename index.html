@@ -7,14 +7,27 @@
     <link rel="stylesheet" href="./homestyle.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div id="app" class="wrapper">
         <div class="imgbox">
-            <img src="./images/main.png" alt="">
+            <img :src="imgSrc" alt="">
         </div>
-        <div class="sign">Ryan Guo</div>
-        <div class="company">Thinkpower Engineer</div>
-        <div class="day">2020/02/15 by Ryan</div>
+        <!-- 姓名 -->
+        <div :class="signBox" :title="name">
+            {{name}}
+        </div>
+        <!-- 內容 -->
+        <div class="company">
+            {{company}}
+            <input type="text" v-model="company">
+        </div>
+        <!-- 時間 -->
+        <div class="day">
+            {{day}}
+        </div>
+        
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script_test.js"></script>
 </body>
 </html>
