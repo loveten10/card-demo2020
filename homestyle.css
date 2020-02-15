@@ -1,0 +1,32 @@
+.wrapper {
+    margin: 20px;
+    display: grid;
+    width: 400px;
+    grid-template-rows: 300px 2fr 2fr 0.5fr;
+    top: 0;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    background: linear-gradient( white,yellow);
+    box-shadow: 4px 5px 20px orange;
+}
+.imgbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign {
+    font-size: 50px;
+    padding: 20px;
+    font-family: monospace;
+}
+.company {
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+.day {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
