@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="./homestyle.css">
 </head>
 <body>
-    <div id="app" class="wrapper">
+    <div id="app" class="wrapper" :style="{background:newColor}">
         <div class="imgbox">
             <img :src="imgSrc" alt="">
         </div>
         <!-- 姓名 -->
+        <div v-if="showAngular">Angular</div>
+        <div v-else-if="showVue">vue</div>
+        <div v-else>React</div>
         <div :class="signBox" :title="name">
             {{name}}
         </div>
         <!-- 內容 -->
         <div class="company">
-            {{company}}
-            <input type="text" v-model="company">
+            <ul v-for="todo in todos">
+                <li>
+                    {{ todo.text }}
+                </li>
+            </ul>
+            <!-- {{company}} -->
+            <!-- <input type="text" v-model="changeMessage">
+            <button @click="onSubmit">確定</button>
+            <input type="text" v-model="newMessage">
+            <button @click="nameSubmit">更改</button>
+            <input type="color" v-model="newColor">
+            <button @click="re">復原</button> -->
         </div>
         <!-- 時間 -->
         <div class="day">
